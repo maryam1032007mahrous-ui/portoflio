@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maryam Mahmoud | Data Scientist & AI Engineer</title>
+<style>
+:root{--bg:#070b12;--card:#0e1624;--text:#d6e2f0;--mute:#7f93ab;--neon:#00ffa3;--neon2:#00c8ff;--line:#1c2a3f}
+:root[data-theme=light]{--bg:#f4f7fb;--card:#fff;--text:#14212f;--mute:#56687d;--neon:#00855a;--neon2:#0070b8;--line:#d5dfeb}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 'Consolas','Courier New',monospace}
+a{color:var(--neon2);text-decoration:none}
+nav{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:12px 5%;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .links{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--mute);font-size:14px}nav a:hover{color:var(--neon)}
+button.t{background:none;border:1px solid var(--neon);color:var(--neon);padding:4px 12px;border-radius:6px;cursor:pointer;font:inherit}
+section{padding:70px 5%;max-width:1100px;margin:auto}
+h2{color:var(--neon);margin-bottom:28px;font-size:26px}h2:before{content:'> ';color:var(--mute)}
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.1}
+.hero h1 span{color:var(--neon);text-shadow:0 0 18px color-mix(in srgb,var(--neon) 50%,transparent)}
+.type{color:var(--neon2);font-size:20px;margin:14px 0;min-height:30px}
+.type:after{content:'▌';animation:b 1s infinite}@keyframes b{50%{opacity:0}}
+.hero p{max-width:640px;color:var(--mute)}
+.btns{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:1px solid var(--neon);color:var(--neon);padding:9px 20px;border-radius:6px}
+.btn.f{background:var(--neon);color:var(--bg)}.btn:hover{box-shadow:0 0 14px var(--neon)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;transition:.25s}
+.card:hover{border-color:var(--neon);transform:translateY(-3px)}
+.card h3{font-size:18px;margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.tags span{font-size:12px;border:1px solid var(--line);color:var(--neon2);padding:2px 9px;border-radius:20px}
+.card ul{padding-left:18px;color:var(--mute);font-size:14px}.card li{margin-bottom:6px}
+.sk{margin-bottom:14px}.sk div.n{display:flex;justify-content:space-between;font-size:14px}
+.bar{height:8px;background:var(--line);border-radius:5px;overflow:hidden;margin-top:4px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--neon),var(--neon2));border-radius:5px;transition:width 1.4s ease}
+.feat{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;border-color:var(--neon)}
+.ph{aspect-ratio:16/10;background:repeating-linear-gradient(45deg,var(--card),var(--card) 10px,var(--line) 10px,var(--line) 20px);border:1px dashed var(--mute);border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--mute);font-size:12px;padding:8px}
+.ph img{width:100%;height:100%;object-fit:cover}
+.rank{color:var(--neon);font-weight:bold;font-size:14px}
+.tl{border-left:2px solid var(--line);padding-left:22px}
+.tl .it{position:relative;margin-bottom:26px}
+.tl .it:before{content:'';position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+.tl small{color:var(--mute)}.tl ul{padding-left:18px;color:var(--mute);font-size:14px}
+footer{text-align:center;padding:30px;color:var(--mute);border-top:1px solid var(--line);font-size:13px}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.on{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<nav>
+ <b style="color:var(--neon)">~/maryam</b>
+ <div class="links"><a href="#about">about</a><a href="#skills">skills</a><a href="#projects">projects</a><a href="#experience">experience</a><a href="#awards">awards</a><a href="#contact">contact</a></div>
+ <button class="t" id="theme">☾ / ☀</button>
+</nav>
+
+<section class="hero" id="home">
+ <p style="color:var(--mute)">$ whoami</p>
+ <h1>Maryam <span>Mahmoud</span></h1>
+ <div class="type" id="type"></div>
+ <p>Computer Science graduate (GPA 3.62) building intelligent systems that bridge data, AI and hardware, from cleaning sensor datasets to deploying models on the edge.</p>
+ <div class="btns"><a class="btn f" href="#projects">View projects</a><a class="btn" href="#contact">Contact me</a></div>
+</section>
+
+<section id="about" class="rv">
+ <h2>about</h2>
+ <p style="max-width:780px;color:var(--mute)">I'm a data science trainee at DEPI and a Computer Science graduate from Damanhour University, with a strong embedded systems and hardware background. I trained in AI agent development with Python at ITI, and I care about data quality: in one project, fixing sampling-rate inconsistencies, mislabeled samples and train/test leakage improved fault-detection separation by roughly 1000x. I'm based in Alexandria, Egypt and ready to relocate.</p>
+</section>
+
+<section id="skills" class="rv">
+ <h2>skills</h2>
+ <div class="grid" id="skillgrid"></div>
+</section>
+
+<section id="projects" class="rv">
+ <h2>projects</h2>
+ <div class="grid">
+  <div class="card feat">
+   <div>
+    <span class="rank">★ FEATURED · 1st Place ICIAAI 2026 &amp; EATD Conference</span>
+    <h3>Tri-Modal Predictive Maintenance System</h3>
+    <div class="tags"><span>ESP32</span><span>MPU6050</span><span>Hall Sensor</span><span>Edge Impulse</span><span>K-means</span><span>Node.js</span><span>WebSocket</span></div>
+    <ul>
+     <li>Embedded IoT system fusing accelerometer, Hall sensor and acoustic sensing to monitor DC motor health in real time.</li>
+     <li>Collected, cleaned and labeled a multi-condition dataset (8 classes, 49+ samples); fixed sampling-rate inconsistencies and labeling errors that were silently corrupting training.</li>
+     <li>Deployed an on-device K-means anomaly detection model; correcting a train/test leakage issue improved anomaly score separation by <b style="color:var(--neon)">~1000x</b>.</li>
+     <li>Model inference triggers automatic relay motor cutoff plus LED/buzzer alerts, with a live Node.js/WebSocket dashboard.</li>
+    </ul>
+   </div>
+   <div class="ph"><img src="images/predictive-maintenance.jpg" alt="Predictive maintenance" onerror="this.replaceWith('Add photo: images/predictive-maintenance.jpg')"></div>
+  </div>
+
+  <div class="card feat">
+   <div>
+    <span class="rank">★ AI PROJECT</span>
+    <h3>AI Chef Agent</h3>
+    <div class="tags"><span>LangChain</span><span>FastAPI</span><span>SQLite</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+    <ul>
+     <li>An AI cooking companion that answers recipe questions, suggests dishes from the ingredients you have, and analyzes ingredient photos.</li>
+     <li>LangChain agent behind a FastAPI backend, with SQLite for saved recipes and conversation history.</li>
+     <li>Custom frontend with chat, recipe library, quick-start prompts and a dark mode.</li>
+    </ul>
+   </div>
+   <div class="ph"><img src="images/ai-chef.png" alt="AI Chef" onerror="this.replaceWith('Add photo: images/ai-chef.png')"></div>
+  </div>
+
+  <div class="card"><h3>WATTO: Smart Home Energy Management</h3>
+   <div class="tags"><span>ESP32</span><span>IoT</span><span>Web Dashboard</span><span>Predictive Analytics</span></div>
+   <ul><li>ESP32 sensor network for home automation plus a web app for visual analytics and predictive billing estimates, helping users cut electrical waste.</li></ul></div>
+
+  <div class="card"><h3>Wearable Seizure Prediction Device</h3>
+   <div class="tags"><span>ESP32</span><span>C++</span><span>MAX30102</span><span>ML</span></div>
+   <ul><li>Predicts epileptic seizures from HRV, SpO2 and body temperature with ~3.2% precision error.</li><li>Companion app sends real-time data and GPS alerts to caregivers when vitals pass thresholds.</li></ul></div>
+
+  <div class="card"><h3>Poultry Guardian: Smart Farm Monitoring</h3>
+   <div class="tags"><span>ESP32</span><span>Firebase</span><span>ThingSpeak</span><span>MQ-135</span><span>DHT-11</span></div>
+   <ul><li>Real-time tracking of temperature, humidity and ammonia to prevent disease; data pushed to Firebase every 30 s.</li><li>Sleep-mode algorithms bring power use down to 1.45 W.</li></ul></div>
+
+  <div class="card"><h3>Smart Factory System</h3>
+   <div class="tags"><span>Ultrasonic</span><span>Solar</span><span>Automation</span></div>
+   <ul><li>Reduced indoor temperature by 4.3°C and automated water supply using ultrasonic sensors and solar power.</li></ul></div>
+
+  <div class="card"><h3>Beheira Landmarks Website</h3>
+   <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+   <ul><li>Fully responsive website showcasing the historical landmarks of Beheira, optimized for every device.</li></ul></div>
+ </div>
+</section>
+
+<section id="experience" class="rv">
+ <h2>experience &amp; education</h2>
+ <div class="tl">
+  <div class="it"><b>Data Scientist Trainee</b> · DEPI<br><small>Present</small><ul><li>Hands-on data science training program.</li></ul></div>
+  <div class="it"><b>AI Agent Development Training</b> · ITI<br><small>Python</small><ul><li>Training in building AI agents with Python.</li></ul></div>
+  <div class="it"><b>Embedded Software Developer</b> (hardware &amp; ML)<br><small>ESP32 · C++ · sensors · edge ML</small><ul><li>Built wearable, IoT and monitoring systems that combine biosensors, Firebase/ThingSpeak and on-device machine learning.</li><li>Collected, labeled and debugged sensor datasets for anomaly detection models.</li></ul></div>
+  <div class="it"><b>Frontend Developer</b> · Remote<br><small>HTML · CSS · JavaScript · React.js</small><ul><li>Designed and delivered responsive web applications with modern UI principles.</li></ul></div>
+  <div class="it"><b>B.Sc. Computer Science</b> · Damanhour University<br><small>September 2025 · GPA 3.62</small></div>
+ </div>
+ <p style="margin-top:10px;color:var(--mute)">Languages: Arabic (native) · English (B2) · German (A1)</p>
+</section>
+
+<section id="awards" class="rv">
+ <h2>competitions &amp; honors</h2>
+ <div class="grid">
+  <div class="card"><div class="ph"><img src="images/eatd-conference.png" alt="" onerror="this.replaceWith('Add photo: images/eatd-conference.png')"></div><br><span class="rank">1st Place (shared) + 20,000 EGP</span><h3>EATD 9th International Scientific Conference</h3><small style="color:var(--mute)">Technological Innovations &amp; Creative Ideas competition · Tri-Modal Predictive Maintenance</small></div>
+  <div class="card"><div class="ph"><img src="images/eatd-certificate.png" alt="" onerror="this.replaceWith('Add photo: images/eatd-certificate.png')"></div><br><span class="rank">Certificate of Distinction</span><h3>EATD Conference Exhibition</h3><small style="color:var(--mute)">Awarded to the Tri-Modal Predictive Maintenance team</small></div>
+  <div class="card"><div class="ph"><img src="images/iciaai-hackathon.jpg" alt="" onerror="this.replaceWith('Add photo: images/iciaai-hackathon.jpg')"></div><br><span class="rank">1st Place</span><h3>Damietta AI Hackathon · ICIAAI 2026</h3><small style="color:var(--mute)">Smart Applications Track · Damietta University with IEEE Egypt Section · Tri-Modal Predictive Maintenance</small></div>
+  <div class="card"><div class="ph"><img src="images/watto-energy-saving.jpg" alt="" onerror="this.replaceWith('Add photo: images/watto-energy-saving.jpg')"></div><br><span class="rank">1st Place</span><h3>University Energy Saving Competition</h3><small style="color:var(--mute)">WATTO smart home energy management</small></div>
+  <div class="card"><div class="ph"><img src="images/robodam.jpg" alt="" onerror="this.replaceWith('Add photo: images/robodam.jpg')"></div><br><span class="rank">4th Place</span><h3>RoboDam Competition</h3></div>
+  <div class="card"><div class="ph"><img src="images/kafr-elsheikh-hackathon.jpg" alt="" onerror="this.replaceWith('Add photo: images/kafr-elsheikh-hackathon.jpg')"></div><br><span class="rank">2nd Place</span><h3>Kafr El Sheikh Hackathon</h3></div>
+  <div class="card"><div class="ph"><img src="images/beheira-innovates.jpg" alt="" onerror="this.replaceWith('Add photo: images/beheira-innovates.jpg')"></div><br><span class="rank">3rd Place</span><h3>Al Beheira Innovates Initiative</h3><small style="color:var(--mute)">Award ceremony</small></div>
+  <div class="card"><div class="ph"><img src="images/honor-university-president.jpg" alt="" onerror="this.replaceWith('Add photo: images/honor-university-president.jpg')"></div><br><span class="rank">Honored</span><h3>Damanhour University President</h3><small style="color:var(--mute)">Dr. Elhami Trabees</small></div>
+  <div class="card"><div class="ph"><img src="images/honor-governor.jpg" alt="" onerror="this.replaceWith('Add photo: images/honor-governor.jpg')"></div><br><span class="rank">Honored</span><h3>Governor of Beheira</h3><small style="color:var(--mute)">Dr. Jacqueline Azer</small></div>
+</div>
+</section>
+
+<section id="contact" class="rv">
+ <h2>contact</h2>
+ <div class="card" style="max-width:520px">
+  <p>📧 <a href="mailto:maryam.mahmoudd7310@gmail.com">maryam.mahmoudd7310@gmail.com</a></p>
+  <p>📞 +20 128 571 7757</p>
+  <p>💼 <a href="https://www.linkedin.com/in/maryam-mahmoud-69a14a290" target="_blank" rel="noopener">LinkedIn</a></p>
+  <p>📍 Alexandria, Egypt (ready to relocate)</p>
+ </div>
+</section>
+<footer>© 2026 Maryam Mahmoud · built with HTML, CSS &amp; JS</footer>
+
+<script>
+// ---- Skills: edit levels (0-100) here ----
+const skills={
+ "Programming":[["Python",85],["C++",80],["Java",65],["SQL",75]],
+ "Data & AI":[["Pandas",80],["NumPy",80],["Machine Learning",70],["LangChain / AI Agents",70]],
+ "Web & Backend":[["FastAPI",75],["JavaScript",80],["HTML / CSS",90]],
+ "Hardware":[["ESP32 / Arduino",90],["Sensor Integration",90],["Edge Impulse",75]]
+};
+const g=document.getElementById('skillgrid');
+for(const[k,v]of Object.entries(skills)){
+ g.insertAdjacentHTML('beforeend',`<div class="card"><h3 style="color:var(--neon2)">${k}</h3>${v.map(s=>`<div class="sk"><div class="n"><span>${s[0]}</span><span>${s[1]}%</span></div><div class="bar"><i data-w="${s[1]}"></i></div></div>`).join('')}</div>`);
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');e.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.w+'%')}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(s=>io.observe(s));
+// typing effect
+const words=["Data Scientist","AI Engineer","Embedded Systems & ML"];let w=0,c=0,d=false;const el=document.getElementById('type');
+(function tick(){const t=words[w];el.textContent=t.slice(0,c);
+ if(!d&&c<t.length)c++;else if(!d){d=true;return setTimeout(tick,1400)}else if(c>0)c--;else{d=false;w=(w+1)%words.length}
+ setTimeout(tick,d?40:90)})();
+// theme toggle
+const r=document.documentElement;
+document.getElementById('theme').onclick=()=>{r.dataset.theme=r.dataset.theme==='light'?'dark':'light'};
+</script>
+</body>
+</html>
